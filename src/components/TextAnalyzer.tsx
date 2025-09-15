@@ -116,43 +116,26 @@ export function TextAnalyzer() {
                 type="number"
                 value={maxWords}
                 onChange={(e) => setMaxWords(Number(e.target.value) || 30)}
-                className="w-full h-10 pr-4 sm:pr-12"
+                className="w-full h-10 pr-14 sm:pr-14"
                 min="1"
                 max="100"
               />
-              {/* Desktop: vertical buttons positioned inside the input area on the right */}
-              <div className="absolute right-2 top-1/2 -translate-y-1/2 hidden sm:flex flex-col items-center">
+              {/* Arrows inside input: stacked vertically on all breakpoints */}
+              <div className="absolute inset-y-0 right-1 flex flex-col items-center justify-center gap-1">
                 <Button
+                  aria-label="Increase max words"
                   variant="ghost"
                   size="sm"
-                  className="h-6 w-6 p-0 hover:bg-transparent cursor-pointer flex items-center justify-center"
+                  className="h-6 w-6 p-0 hover:bg-transparent"
                   onClick={() => setMaxWords(Math.min(100, maxWords + 1))}
                 >
                   <ChevronUp className="h-4 w-4" />
                 </Button>
                 <Button
+                  aria-label="Decrease max words"
                   variant="ghost"
                   size="sm"
-                  className="h-6 w-6 p-0 hover:bg-transparent cursor-pointer flex items-center justify-center mt-1"
-                  onClick={() => setMaxWords(Math.max(1, maxWords - 1))}
-                >
-                  <ChevronDown className="h-4 w-4" />
-                </Button>
-              </div>
-              {/* Mobile: two buttons under the input aligned to the right */}
-              <div className="sm:hidden mt-2 flex justify-end gap-2">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="w-12 h-8 p-0 hover:bg-transparent flex items-center justify-center"
-                  onClick={() => setMaxWords(Math.min(100, maxWords + 1))}
-                >
-                  <ChevronUp className="h-4 w-4" />
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="w-12 h-8 p-0 hover:bg-transparent flex items-center justify-center"
+                  className="h-6 w-6 p-0 hover:bg-transparent"
                   onClick={() => setMaxWords(Math.max(1, maxWords - 1))}
                 >
                   <ChevronDown className="h-4 w-4" />
