@@ -5,6 +5,7 @@ type Language = 'en' | 'es';
 interface Translations {
   title: string;
   subtitle: string;
+  description: string;
   instructions: {
     title: string;
     steps: string[];
@@ -41,6 +42,7 @@ const translations: Record<Language, Translations> = {
   en: {
     title: "Sentence Length Analyzer",
     subtitle: "Paste your text to highlight sentences longer than your specified word count",
+    description: "Quickly spot sentences that exceed a chosen word limit so you can simplify wording and improve readability.",
     instructions: {
       title: "How to use:",
       steps: [
@@ -80,6 +82,7 @@ const translations: Record<Language, Translations> = {
   es: {
     title: "Analizador de Longitud de Oraciones",
     subtitle: "Pega tu texto para resaltar oraciones más largas que el número de palabras especificado",
+    description: "Detecta rápidamente oraciones que superan un límite de palabras para simplificar el texto y mejorar la legibilidad.",
     instructions: {
       title: "Cómo usar:",
       steps: [
