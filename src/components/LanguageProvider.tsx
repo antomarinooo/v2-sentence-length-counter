@@ -110,10 +110,10 @@ const translations: Record<Language, Translations> = {
       github: "@antomarinooo en GitHub",
       instagram: "@fusefolio en Instagram",
       madeWith: "Hecho con",
-      privacyFocused: "Enfocado en privacidad",
+      privacyFocused: "Todos los datos son privados",
       noDataCollection: "Sin recolección de datos",
-      clientSideProcessing: "Procesamiento del lado del cliente",
-      copyright: "© 2025 Antonia Cajigal. Analizador de Longitud de Oraciones. Proyecto de código abierto."
+      clientSideProcessing: "Procesamiento de datos localmente",
+      copyright: "© 2025 Antonia Cajigal | Analizador de Longitud de Oraciones. Proyecto de código abierto."
     }
   }
 };
