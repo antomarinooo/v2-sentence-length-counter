@@ -16,7 +16,6 @@ export function Header() {
             <div className="text-left">
               <h1 className="text-2xl sm:text-3xl font-medium mb-2">{t.title}</h1>
               <p className="text-muted-foreground text-sm sm:text-base">{t.subtitle}</p>
-              <p className="text-muted-foreground text-xs sm:text-sm mt-2">{t.description}</p>
             </div>
             <div className="flex items-center space-x-2">
               <Globe className="h-4 w-4 text-muted-foreground" />
@@ -38,7 +37,6 @@ export function Header() {
               <div className="text-left">
                 <h1 className="text-2xl font-medium mb-0">{t.title}</h1>
                 <p className="text-muted-foreground text-sm">{t.subtitle}</p>
-                <p className="text-muted-foreground text-xs mt-1">{t.description}</p>
               </div>
               <div className="flex items-center space-x-2">
                 <Globe className="h-4 w-4 text-muted-foreground" />

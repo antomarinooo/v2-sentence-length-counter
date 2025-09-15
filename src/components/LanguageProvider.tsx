@@ -10,6 +10,23 @@ interface Translations {
     title: string;
     steps: string[];
   };
+  tutorial: {
+    title: string;
+    description: string;
+    tableHeaders: {
+      textType: string;
+      recommendedAverage: string;
+    };
+    recommendations: Array<{
+      textType: string;
+      wordCount: string;
+    }>;
+    note: string;
+    sources: {
+      label: string;
+      items: string[];
+    };
+  };
   settings: string;
   maxWords: string;
   yourText: string;
@@ -52,6 +69,29 @@ const translations: Record<Language, Translations> = {
         "Hover over highlighted sentences to see exact word count"
       ]
     },
+    tutorial: {
+      title: "Quick Guide: Words per Sentence",
+      description: "There is no fixed rule, but keeping sentences short is recommended to improve clarity and readability.",
+      tableHeaders: {
+        textType: "Text Type",
+        recommendedAverage: "Recommended Average"
+      },
+      recommendations: [
+        { textType: "Academic / Essays", wordCount: "20–25 words" },
+        { textType: "News / Journalism", wordCount: "15–20 words" },
+        { textType: "Web / Blogs", wordCount: "10–18 words" },
+        { textType: "Technical / Manuals", wordCount: "15–25 words" },
+        { textType: "Literary / Creative", wordCount: "Variable, by style" }
+      ],
+      note: "Note: These are readability recommendations, not official rules.",
+      sources: {
+        label: "Sources:",
+        items: [
+          "Harvard Library – Writing Guide",
+          "Maryland Developmental Disabilities Council – Plain Language Guide"
+        ]
+      }
+    },
     settings: "Settings",
     maxWords: "Max words per sentence:",
     yourText: "Your Text",
@@ -91,6 +131,29 @@ const translations: Record<Language, Translations> = {
         "Las oraciones largas se resaltarán",
         "Pasa el cursor sobre las oraciones resaltadas para ver el conteo exacto"
       ]
+    },
+    tutorial: {
+      title: "Guía Rápida: Palabras por Oración",
+      description: "No hay una regla fija, pero se recomienda mantener las oraciones cortas para mejorar la claridad y la lectura.",
+      tableHeaders: {
+        textType: "Tipo de Texto",
+        recommendedAverage: "Promedio Recomendado"
+      },
+      recommendations: [
+        { textType: "Académico / Ensayos", wordCount: "20–25 palabras" },
+        { textType: "Noticias / Periodismo", wordCount: "15–20 palabras" },
+        { textType: "Web / Blogs", wordCount: "10–18 palabras" },
+        { textType: "Técnico / Manuales", wordCount: "15–25 palabras" },
+        { textType: "Literario / Creativo", wordCount: "Variable, según estilo" }
+      ],
+      note: "Nota: Son recomendaciones de legibilidad, no normas oficiales.",
+      sources: {
+        label: "Fuentes:",
+        items: [
+          "Harvard Library – Writing Guide",
+          "Maryland Developmental Disabilities Council – Plain Language Guide"
+        ]
+      }
     },
     settings: "Configuración",
     maxWords: "Máx. palabras por oración:",
