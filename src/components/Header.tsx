@@ -1,5 +1,5 @@
 import { Globe } from 'lucide-react';
-import { Button } from './ui/button';
+// ...existing code...
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { useLanguage } from './LanguageProvider';
 
@@ -31,9 +31,13 @@ export function Header() {
             </div>
           </div>
           
-          {/* Mobile layout */}
-          <div className="sm:hidden space-y-3">
-            <div className="flex justify-end">
+          {/* Mobile layout: heading left, language selector right on same row */}
+          <div className="sm:hidden">
+            <div className="flex items-center justify-between">
+              <div className="text-left">
+                <h1 className="text-2xl font-medium mb-0">{t.title}</h1>
+                <p className="text-muted-foreground text-sm">{t.subtitle}</p>
+              </div>
               <div className="flex items-center space-x-2">
                 <Globe className="h-4 w-4 text-muted-foreground" />
                 <Select value={language} onValueChange={(value: 'en' | 'es') => setLanguage(value)}>
@@ -46,10 +50,6 @@ export function Header() {
                   </SelectContent>
                 </Select>
               </div>
-            </div>
-            <div className="text-center">
-              <h1 className="text-2xl font-medium mb-2">{t.title}</h1>
-              <p className="text-muted-foreground text-sm">{t.subtitle}</p>
             </div>
           </div>
         </div>

@@ -120,7 +120,8 @@ export function TextAnalyzer() {
                 min="1"
                 max="100"
               />
-              <div className="absolute right-1 top-1/2 -translate-y-1/2 flex flex-col">
+              {/* Desktop: vertical small buttons on the right */}
+              <div className="hidden sm:absolute sm:right-1 sm:top-1/2 sm:-translate-y-1/2 sm:flex sm:flex-col">
                 <Button
                   variant="ghost"
                   size="sm"
@@ -136,6 +137,25 @@ export function TextAnalyzer() {
                   onClick={() => setMaxWords(Math.max(1, maxWords - 1))}
                 >
                   <ChevronDown className="h-3 w-3" />
+                </Button>
+              </div>
+              {/* Mobile: small horizontal buttons below the input */}
+              <div className="sm:hidden mt-2 flex gap-2">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="flex-1 h-8 p-0 hover:bg-transparent"
+                  onClick={() => setMaxWords(Math.min(100, maxWords + 1))}
+                >
+                  <ChevronUp className="h-4 w-4" />
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="flex-1 h-8 p-0 hover:bg-transparent"
+                  onClick={() => setMaxWords(Math.max(1, maxWords - 1))}
+                >
+                  <ChevronDown className="h-4 w-4" />
                 </Button>
               </div>
             </div>
