@@ -121,7 +121,7 @@ export function TextAnalyzer() {
                 max="100"
               />
               {/* Desktop: vertical buttons positioned inside the input area on the right */}
-              <div className="hidden sm:flex sm:absolute sm:right-2 sm:top-1/2 sm:-translate-y-1/2 sm:flex-col sm:items-center">
+              <div className="absolute right-2 top-1/2 -translate-y-1/2 hidden sm:flex flex-col items-center">
                 <Button
                   variant="ghost"
                   size="sm"
@@ -139,8 +139,8 @@ export function TextAnalyzer() {
                   <ChevronDown className="h-4 w-4" />
                 </Button>
               </div>
-              {/* Mobile: two buttons centered under the input with fixed width */}
-              <div className="sm:hidden mt-2 flex justify-center gap-2">
+              {/* Mobile: two buttons under the input aligned to the right */}
+              <div className="sm:hidden mt-2 flex justify-end gap-2">
                 <Button
                   variant="ghost"
                   size="sm"
