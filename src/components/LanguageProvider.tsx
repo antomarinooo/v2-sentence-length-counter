@@ -21,6 +21,7 @@ interface Translations {
   wordsHover: string;
   emptyState: string;
   words: string;
+  clearText: string;
   addSample: string;
   footer: {
     about: string;
@@ -61,6 +62,7 @@ const translations: Record<Language, Translations> = {
     wordsHover: "words. Hover over them to see exact word count.",
     emptyState: "Paste your text above to analyze sentence length",
     words: "words",
+  clearText: "Clear Text",
     addSample: "Add Sample",
     footer: {
       about: "About this project",
@@ -99,6 +101,7 @@ const translations: Record<Language, Translations> = {
     wordsHover: "palabras. Pasa el cursor sobre ellas para ver el conteo exacto.",
     emptyState: "Pega tu texto arriba para analizar la longitud de oraciones",
     words: "palabras",
+  clearText: "Borrar texto",
     addSample: "Añadir Muestra",
     footer: {
       about: "Sobre este proyecto",

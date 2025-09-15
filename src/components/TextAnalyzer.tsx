@@ -145,14 +145,24 @@ export function TextAnalyzer() {
           <div className="space-y-3">
             <div className="flex items-center justify-between">
               <Label htmlFor="textInput" className="text-sm font-medium">{t.yourText}</Label>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={addSampleText}
-                className="cursor-pointer"
-              >
-                {t.addSample}
-              </Button>
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={addSampleText}
+                  className="cursor-pointer"
+                >
+                  {t.addSample}
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setText('')}
+                  className="cursor-pointer"
+                >
+                  {t.clearText}
+                </Button>
+              </div>
             </div>
             <Textarea
               id="textInput"
