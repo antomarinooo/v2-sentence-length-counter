@@ -92,6 +92,25 @@ export function Footer() {
                   </svg>
                   <span className="text-xs text-muted-foreground">Tailwind CSS</span>
                 </div>
+                {/* Shadcn credit block added as requested */}
+                <div className="inline-flex justify-start items-center gap-1.5">
+                  <div data-svg-wrapper className="relative">
+                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clipPath="url(#clip0_10_494)">
+                        <path d="M12.1875 8.30273L7.5 12.9902" stroke="#8B8B8B" strokeWidth="1.875" strokeLinecap="round" strokeLinejoin="round" />
+                        <path d="M11.25 3.14648L2.34375 12.0527" stroke="#8B8B8B" strokeWidth="1.875" strokeLinecap="round" strokeLinejoin="round" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_10_494">
+                          <rect width="15" height="15" fill="white" transform="translate(0 0.802734)" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+                  <div className="inline-flex flex-col justify-start items-start">
+                    <div className="justify-center text-xs text-muted-foreground font-normal font-['Inter'] leading-none">Shadcn UI</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
